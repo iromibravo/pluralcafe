@@ -1,0 +1,240 @@
+:root{
+    --purple:#F26363;
+    --green-claro:#63BF7A;
+    --orange:#F89722;
+    --zafiro:#7D9BCD;
+    --button-blue:rgb(86, 61, 223);
+    --pink:#E9A8A2;
+    --cream:#F4E1B7;
+    --black:#000000;
+    --whithe:#FFFFFF;
+    --gris:#1e272e;
+    --grisclaro:#585b5e;
+    --letra-logo: 'Manjari';
+    --letra-titulo-aside: 'Lucida Sans Unicode';
+    --letra-parrafo-aside: 'Manjari';
+  }
+  
+  * {
+      padding: 0;
+      margin: 0;
+  }
+  
+  html{
+    font-size: 62.5%;
+    box-sizing: border-box; /* Hack para Box Model*/
+    scroll-snap-type: y mandatory;
+  }
+  
+  body{
+    font-size: 16px; /* 1rem = 10px*/;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    min-height: auto;
+    background-size: cover;
+    overflow-y:scroll;
+    font-family: 'Manjari', sans-serif;
+  }
+  
+  .body:hover{
+    overflow-y: auto;
+  }
+  
+  .body::-webkit-scrollbar{
+    width: 8px;
+  }
+  
+  /***************HEADER********************/
+  .menu{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+    width: 100%;
+    height: 71px;
+    position: fixed;
+    /*opacity: 0.8;*/
+    background: var(--black);/*fondo header*/
+  }
+  
+  .logos{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: left;
+  }
+  
+  .logos img{
+    width: 50px;
+    cursor: pointer;
+    margin: 8px 12px;
+    line-height: 60px;
+    max-width: 100px;
+  }
+  
+  .logos .logo{
+    border-radius: 30%;
+  }
+  
+  .icon{
+    display: flex;
+    flex-direction: row;
+    grid-column: 4;
+    width: 50%;
+    justify-content: right;
+    padding-right: 30px;
+  }
+  
+  /*icono notificació*/
+  .icon > img{
+    width: 60px;
+    margin-top: 22px;
+    padding: 10px;
+   }
+   
+  /*icon apoyanos*/
+   .icon1 {
+    border: none;
+    border-radius: 25px;
+    color:var(--orange);
+    padding: 8px 18px;
+    text-align: center;
+    text-decoration: none;
+    display:flex;
+    font-size: 18px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    margin-top: 15px;
+    margin: 15px;
+  }
+  /*icon usuario*/
+  .icon1 {
+    background:var(--black);
+    color: var(--whithe); 
+    border: 3px solid var(--green-claro);
+  }
+  /*icon ayudanos*/
+  .icon2 {
+    background:var(--orange);
+    color: var(--whithe);
+    border: 2px solid var(--orange);
+  }
+  /*icon calendar, bell, shoping*/
+  #shoping{
+    width: 8px; /*Separación de los iconos*/
+    padding:22px;
+    height: 25px;
+    color:var(--orange);
+  }
+  
+  #button-user{
+  overflow: inherit;
+  text-transform: none;
+  cursor: pointer;
+  font-family: inherit;
+  width:fit-content;
+  }
+  
+  .cont-menu::-webkit-scrollbar-thumb{
+    background-color: var(--orange);
+    border-radius: 5px;
+  }
+  
+  .cont-menu{
+    top: 0;
+    width: 20%;
+    min-width: 20%;
+    height: 100vh;
+    background: #000000;
+    position: fixed;
+    transition: all 500ms ease;
+    transform: translateX(-100%);
+    overflow-y: hidden;
+  }
+  
+  .cont-menu:hover{
+    overflow-y:visible;
+  }
+  .cont-menu::-webkit-scrollbar{
+    width: 8px;
+  }
+  .cont-menu::-webkit-scrollbar-thumb{
+    background-color: var(--orange);
+    border-radius: 5px;
+  }
+  
+  #btn-menu:checked ~ .cont-menu{
+    transform: translateX(0%);
+  }
+  
+  .nav-vertical a {
+    display: flex;
+    justify-content: flex-start;
+    text-decoration: none;
+    padding: 20px 10px 10px 50px;
+    color: #c7c7c7;
+    transition: all 400ms ease;
+  }
+  
+  .div-vertical {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content:space-between;
+      padding: 2px 30px;
+      margin-bottom: 15px;
+      padding-bottom: 2px;
+      padding-top: 2px;
+  }
+  /*H3 GENERAL*/
+  h3{
+    width: 90%;
+    padding-top: 20px;
+    font-size: 23px;
+    color: var(--orange);
+    font-family:'Lucida Sans Unicode';
+  }
+  
+  .div-vertical img{
+    width: 30%;
+    padding: 14px;
+  }
+  
+  .cont-menu nav a:hover{
+    border-left: 20px solid  var(--orange);
+    color:var(--orange);
+    font-size: 28px;
+    align-content: left;
+  }
+  
+  .cont-menu .label {
+    position: absolute;
+    right: 5px;
+    top: 10px;
+    width: 20px;
+    background-color:var(--green-claro);
+    border-radius: 30%;
+    cursor: pointer;
+  }
+  
+  i{
+    padding-right: 18px;
+  }
+  
+  .fi-rr-coffee{
+    padding-left: 14px;
+  }
+  /************************************FIN DE LA PLANTILLA**************************************/
+  
+
+/*CONTAINER PRINCIPAL*/
+.container{
+    background:var(--fondo-container);/*fondo div container*/
+    width: 100%;
+    height: 100vh;
+    padding-top: 90px;/*margensuperior*/
+    display: grid;
+    grid-template-columns: 20% 80%;  /*repeat(3, 1fr);*/ 
+    gap:20px;
+} 
+
